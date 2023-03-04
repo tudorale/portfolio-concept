@@ -2,9 +2,28 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Navbar from "../components/Navbar.jsx";
 import Footer from '../components/Footer';
+import {useEffect} from "react";
 
 export default function Home() {
-  
+
+  const handleCursorHoverButtons = () => {
+    let cursor = document.querySelector(".cursor");
+    let cursorDot = document.querySelector(".innerCursor");
+
+    cursorDot.classList.add("hoverDot")
+    cursor.classList.add("hoverBorder")
+  }
+
+  const handleCursorOutButtons = () => {
+    let cursor = document.querySelector(".cursor");
+    let cursorDot = document.querySelector(".innerCursor");
+
+    cursorDot.classList.remove("hoverDot")
+    cursor.classList.remove("hoverBorder")
+  }
+
+
+ 
   return (
     <div className={styles.home}>
       <Head>
@@ -13,15 +32,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div style={{alignSelf: "start"}}>
         <Navbar />
       </div>
 
       <div className={styles.middle}>
-            <div className={styles.tringle
-            }>
-              <img src="/tringle.png"/>
+            <div className={styles.tringle} onMouseEnter={handleCursorHoverButtons} onMouseLeave={handleCursorOutButtons}>
+              <img src="/tringle.png" />
               <p>personal<br/>projects</p>
             </div>
 
@@ -29,8 +47,8 @@ export default function Home() {
               I create beautiful<br/> websites with my hands<br/> and a computer
             </div>
 
-            <div className={styles.x}>
-              <img src="/x.png"/>
+            <div className={styles.x} onMouseEnter={handleCursorHoverButtons} onMouseLeave={handleCursorOutButtons}>
+              <img src="/x.png" />
               <p>case<br/>studies</p>
             </div>
 

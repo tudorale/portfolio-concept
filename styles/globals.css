@@ -4,6 +4,7 @@
 body{
   font-family: "Lato",'Courier New', Courier, monospace;
   background: rgb(3,0,15);
+  overflow: hidden;
   background: radial-gradient(circle, rgba(3,0,15,1) 0%, rgba(8,0,38,1) 0%, rgba(3,0,15,1) 100%);
 }
 
@@ -11,7 +12,7 @@ body{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  cursor: none !important;
+  cursor: none;
 }
 
 a {
@@ -25,20 +26,41 @@ a {
   border: 1px solid #4112ff3f;
   border-radius: 50%;
   position: absolute;
+  z-index: -1;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
-  z-index: 100000;
-  
+  display: none;
 }
 
 
 .innerCursor{
   width: 7px;
   height: 7px;
-  z-index: 100000;
+  z-index: -1;
   border-radius: 50%;
   background-color: #4112ff;
   position: absolute;
   transition-duration: 50ms;
   transition-timing-function: ease-out;
+  display: none;
+}
+
+.hoverDot{
+  transform: scale(1.5);
+}
+
+.hoverBorder{
+  background-color: #b29fff23;
+  border: none;
+  transform: scale(1.5);
+}
+
+.hoverDotLink{
+  transform: scale(1.5);
+}
+
+.hoverBorderLink{
+  background-color: #b29fff23;
+  border: none;
+  transform: scale(1);
 }
