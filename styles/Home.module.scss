@@ -1,0 +1,65 @@
+
+.home{
+    display: grid;    
+    height: 100vh;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    align-self: center;
+    margin-top: 40px;
+    img{
+        width: 45px;
+        position: relative;
+        top: 10px;
+    }
+    div:nth-child(2){
+        text-align: center;
+        margin: 0 90px;
+        font-size: 3.5rem;
+    }
+    div:nth-child(2)::after{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        margin-top: 25px;
+        margin-left: 20px;
+        background: url("/computer.png");
+        background-repeat: no-repeat;
+    }
+    .x, .tringle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        p{
+            font-family: "VT323";
+            color: rgba(255, 255, 255, 0.308);
+            position: relative;
+            top: 20px;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 950px){
+    .middle{
+        font-size: 3rem;
+        div:nth-child(2)::after{
+            margin-top: 19px;
+        }
+    }
+}
+
+@media only screen and (max-width: 810px){
+    .middle{
+        div:nth-child(2){
+            margin: 0 50px;
+        }
+    }
+}
