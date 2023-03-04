@@ -1,22 +1,8 @@
 import styles from "./Components.module.scss"
 import Link from "next/link"
-function Footer() {
+import {handleCursorHoverLink, handleCursorOutLink} from "./actions.js";
 
-    const handleCursorHoverLink = () => {
-        let cursor = document.querySelector(".cursor");
-        let cursorDot = document.querySelector(".innerCursor");
-    
-        cursorDot.classList.add("hoverDotLink")
-        cursor.classList.add("hoverBorderLink")
-      }
-    
-      const handleCursorOutLink = () => {
-        let cursor = document.querySelector(".cursor");
-        let cursorDot = document.querySelector(".innerCursor");
-    
-        cursorDot.classList.remove("hoverDotLink")
-        cursor.classList.remove("hoverBorderLink")
-      }
+function Footer() {
 
   return (
     <div className={styles.footer}>

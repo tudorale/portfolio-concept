@@ -3,27 +3,10 @@ import styles from '../styles/Home.module.scss'
 import Navbar from "../components/Navbar.jsx";
 import Footer from '../components/Footer';
 import {useEffect} from "react";
+import {handleCursorHoverButtons, handleCursorOutButtons} from "../components/actions.js"
 
 export default function Home() {
 
-  const handleCursorHoverButtons = () => {
-    let cursor = document.querySelector(".cursor");
-    let cursorDot = document.querySelector(".innerCursor");
-
-    cursorDot.classList.add("hoverDot")
-    cursor.classList.add("hoverBorder")
-  }
-
-  const handleCursorOutButtons = () => {
-    let cursor = document.querySelector(".cursor");
-    let cursorDot = document.querySelector(".innerCursor");
-
-    cursorDot.classList.remove("hoverDot")
-    cursor.classList.remove("hoverBorder")
-  }
-
-
- 
   return (
     <div className={styles.home}>
       <Head>
