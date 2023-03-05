@@ -2,31 +2,29 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Navbar from "../components/Navbar.jsx";
 import Footer from '../components/Footer.jsx';
-import {useEffect} from "react";
 import {handleCursorHoverButtons, handleCursorOutButtons} from "../components/actions.js"
-import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Suspense, useState, useEffect } from 'react';
+import * as THREE from "three"
 import {OrbitControls, useTexture} from "@react-three/drei";
 
+
 const Shape = ({position, ascending}) => {
-  const colorMap = useTexture('texture.webp');
+  const colorMap = useTexture('texture2.jpg');
+
   return (
-    <mesh position={position}>
-      <boxBufferGeometry args={[0.2, 0.2, 0.2]} />
-      <meshBasicMaterial map={colorMap} />
-    </mesh>
+    <>
+      <mesh position={position} rotation={[1, 0, 0]}>
+        <boxBufferGeometry args={[0.2, 0.2, 0.2]} />
+        <meshBasicMaterial map={colorMap} />
+      </mesh>
+    </>
   );
+
 }
 
 
 export default function Home() {
-
-
-    let initialized = false;
-
-    useEffect(() => {
-
-    }, [])
 
   return (
     <div className={styles.home}>
@@ -53,12 +51,12 @@ export default function Home() {
               </div>
               <div className={styles.cube + " " + "cube"}>
                 <Canvas
-                  camera={{ fov: 31, near: 0.01, far: 50, position: [0, -0.5, 0.5] }}
-                  style={{ height: '350px', width: "400px", backgroundColor: 'transparent' }}
+                  camera={{ fov: 31, near: 0.01, far: 50, position: [0, -0.5, 0.5]}}
+                  style={{ height: '350px', width: "320px", backgroundColor: 'transparent' }}
                 >
                   <Suspense fallback={null}>
                     <Shape />
-                    <OrbitControls autoRotate autoRotateSpeed={12} />
+                    <OrbitControls autoRotate autoRotateSpeed={11}/>
                   </Suspense>
                 </Canvas>
               </div>
