@@ -5,7 +5,7 @@ body{
   font-family: "Lato",'Courier New', Courier, monospace;
   background: rgb(3,0,15);
   overflow: hidden;
-  background: radial-gradient(circle, rgba(3,0,15,1) 0%, rgba(8,0,38,1) 0%, rgba(3,0,15,1) 100%);
+  background: radial-gradient(circle, rgba(3,0,15,1) 0%, rgb(11, 0, 49) 0%, rgba(3,0,15,1) 100%);
 }
 
 * {

@@ -14,7 +14,7 @@ const Shape = ({position, ascending}) => {
 
   return (
     <>
-      <mesh position={position} rotation={[1, 0, 0]}>
+      <mesh position={position} rotation={[2, 0, 0]}>
         <boxBufferGeometry args={[0.2, 0.2, 0.2]} />
         <meshBasicMaterial map={colorMap} />
       </mesh>
@@ -25,6 +25,33 @@ const Shape = ({position, ascending}) => {
 
 
 export default function Home() {
+
+  const [speed, setSpeed] = useState(6);
+  const [moving, setMoving] = useState({moving: false});
+  useEffect(() => {
+    
+    document.addEventListener("mousemove", (e) => {
+     
+      setMoving({moving: true});
+
+      let timeout;
+      (() => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => setMoving({moving:false}), 500);
+      })();
+
+
+    })
+
+  }, [])
+
+  useEffect(() => {
+    if(moving.moving){
+      setSpeed(50);
+    }else{
+      setSpeed(6)
+    }
+  }, [moving.moving])
 
   return (
     <div className={styles.home}>
@@ -56,7 +83,7 @@ export default function Home() {
                 >
                   <Suspense fallback={null}>
                     <Shape />
-                    <OrbitControls autoRotate autoRotateSpeed={11}/>
+                    <OrbitControls autoRotate autoRotateSpeed={speed}/>
                   </Suspense>
                 </Canvas>
               </div>

@@ -19,9 +19,30 @@
     padding-bottom: 20px;
     p{
         font-size: 1.5rem;
-        color: rgba(255, 255, 255, 0.308);
+        color: rgba(187, 170, 255, 0.349);
         font-family: "VT323";
         margin: 0 20px;
         text-decoration: underline;
+    }
+
+    .active{
+        color:rgba(255, 255, 255, 0.904);
+    }
+
+    .notActive{
+        color: rgba(187, 170, 255, 0.349);
+    }
+
+    .cta{
+        animation: pulseColor .65s forwards alternate-reverse infinite;
+    }
+}
+
+@keyframes pulseColor{
+    from{
+        color: rgba(187, 170, 255, 0.349);
+    }
+    to{
+        color: rgba(255, 255, 255, 0.904);
     }
 }
