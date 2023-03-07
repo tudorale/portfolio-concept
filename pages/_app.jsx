@@ -1,29 +1,46 @@
 import '../styles/globals.css'
 import {useEffect} from "react"
-
+import {AnimatePresence, motion} from "framer-motion"
+import {useRouter} from "next/router";
 
 export default function App({Component, pageProps}) {
 
-  useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-    const innerCursor = document.querySelector(".innerCursor");
+  const router = useRouter();
 
-    document.addEventListener("mousemove", (e) =>{
-      cursor.setAttribute("style", "top: "+(e.pageY-22)+"px; left: "+(e.pageX-23)+"px; display: block;")
-    })
 
-    document.addEventListener("mousemove", (e) =>{
-      innerCursor.setAttribute("style", "top: "+(e.pageY-1)+"px; left: "+(e.pageX-1)+"px; display: block;")
-    })
-
-    }, [])
 
   return (
-    <>
-      <div className="cursor"></div>
-      <div className="innerCursor"></div>
-      <Component {...pageProps} />
-    </>
+  <>
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={router.route}
+        initial="initialState"
+        animate="animateState"
+        exit="exitState"
+        transition= {{
+          duration: 0.75,
+        }}
+        variants={{
+          initialState: {
+            opacity: 0,
+            clipPath: "polygon(0 0, 100% 0, 50% 100%, 50% 100%",
+          },
+          animateState: {
+            opacity: 1,
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%",
+
+          },
+          exitState: {
+            clipPath: "polygon(50% 0, 50% 0, 100% 100%, 0% 100%",
+
+          }
+        }}
+        className="base"
+      >
+        <Component {...pageProps} />
+      </motion.div>
+    </AnimatePresence>
+  </>
     
   )
   

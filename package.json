@@ -23,6 +23,7 @@
   "devDependencies": {
     "@react-three/drei": "^9.57.0",
     "@react-three/fiber": "^8.11.7",
+    "framer-motion": "^10.1.0",
     "gltfjsx": "^6.1.4",
     "react-spring": "^9.7.1",
     "three": "^0.150.1"
