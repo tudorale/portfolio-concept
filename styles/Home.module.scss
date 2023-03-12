@@ -1,7 +1,10 @@
 
-.home, .projects{
+.home{
     display: grid;    
     height: 100vh;
+    background: rgb(4,0,23);
+    background: radial-gradient(circle, rgba(4,0,23,1) 0%, rgba(12,0,57,1) 0%, rgba(4,0,23,1) 100%);
+    overflow: hidden;
 }
 
 .middle{
@@ -11,6 +14,8 @@
     color: white;
     align-self: center;
     margin-top: 40px;
+    position: relative;
+    z-index: 5;
     img{
         width: 55px;
         position: relative;
@@ -52,7 +57,7 @@
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -3;
+    z-index: -2 !important;
 }
 
 @media only screen and (max-width: 950px){

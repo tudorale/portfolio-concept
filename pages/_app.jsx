@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import {useEffect} from "react"
 import {AnimatePresence, motion} from "framer-motion"
 import {useRouter} from "next/router";

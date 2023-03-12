@@ -70,8 +70,14 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(router);
-  }, [router, []])
+    document.querySelector("body").style.overflowY = "hidden";
+
+    let allElements = document.getElementsByTagName("*");
+    for (let i = 0, len = allElements.length; i < len; i++) {
+        let element = allElements[i];
+        element.classList.add("withoutCursor")
+    }
+  }, [router])
 
   return (
     <div className={styles.home + " " + "home"}>
@@ -108,7 +114,7 @@ export default function Home() {
                 >
                   <Suspense fallback={null}>
                     <Shape />
-                    <OrbitControls autoRotate autoRotateSpeed={speed}/>
+                    <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={speed}/>
                   </Suspense>
                 </Canvas>
               </div>

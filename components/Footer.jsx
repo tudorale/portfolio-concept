@@ -6,10 +6,18 @@ import {useRouter} from "next/router";
 
 function Footer({path}) {
 
+    const router = useRouter();
 
+    useEffect(() => {
+        let footer = document.querySelector("#footer");
+
+        document.addEventListener("scroll", () => {
+           footer.style.opacity = "1";
+        })
+    }, [])
 
   return (
-    <div className={styles.footer}>
+    <div className={router.pathname === "/" ? styles.footer : styles.otherFooter} id="footer"> 
         <Link href="/projects">
             <p className={path === "/projects" ? styles.active : styles.notActive} onMouseEnter={handleCursorHoverLink} onMouseLeave={handleCursorOutLink}>personal projects</p>
         </Link>

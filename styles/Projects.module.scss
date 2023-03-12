@@ -1,0 +1,108 @@
+.projects{
+    display: grid;    
+    height: 100vh;
+    background: rgb(4,0,23);
+    background: radial-gradient(circle, rgba(4,0,23,1) 0%, rgba(12,0,57,1) 0%, rgba(4,0,23,1) 100%);
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    align-self: center;
+    margin-top: -40px;
+
+    .text{
+        text-align: center;
+        margin: 0 90px;
+        position: relative;
+        z-index: 2;
+        font-size: 2.5rem;
+        width: 600px;
+    }
+
+    .x, .cube{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 5 !important;
+
+        img{
+            width: 55px;
+            position: relative;
+            padding-top: 10px;
+        }
+        p{
+            font-family: "VT323";
+            color: rgba(255, 255, 255, 0.308);
+            position: relative;
+            padding-top: 0px;
+            font-size: 1.3rem;
+        }
+    }
+
+    .middleMiddle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+}
+
+.projectsWrapper{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+.scroll {
+    display: block;
+    margin-top: 80px;
+}
+
+.circle {
+    animation: upDown 800ms infinite alternate-reverse;
+}
+
+@keyframes upDown {
+    0% {
+      -webkit-transform: translate(262px, 798px);
+      transform: translate(262px, 798px);
+    }
+    100% {
+      -webkit-transform: translate(262px, 830px);
+      transform: translate(262px, 830px);
+    }
+}
+
+
+.projectsShape{
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1 !important;
+}
+
+
+@media only screen and (max-width: 950px){
+    .middle{
+        font-size: 3rem;
+        div:nth-child(2)::after{
+            margin-top: 19px;
+        }
+    }
+}
+
+@media only screen and (max-width: 810px){
+    .middle{
+        div:nth-child(2){
+            margin: 0 50px;
+        }
+    }
+}
