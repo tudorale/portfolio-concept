@@ -31,6 +31,7 @@ export default function Home() {
         <Head>
           <title>Tudor Alexandru | Personal Projects</title>
           <meta name="description" content="Personal projects that I made along my journey, they are also open-sourced as always." />
+          <link rel="icon" href="/tringle.png" />
         </Head>
 
         <div style={{alignSelf: "start"}}>
@@ -101,50 +102,52 @@ export default function Home() {
       </div>
 
       <div className={styles.projectsWrapper}>
-        <Project
-          image="/projects/scorpion.jpg"
-          repo="https://github.com/tudorale/scorpion-theme"
-          title="Scorpion Theme"
-          description="Scorpion is a professional and a looking good dark theme for Visual Studio Code, with three main colors for your editor that will make you relaxed."
-          website="https://marketplace.visualstudio.com/items?itemName=TudorAlexandru.scorpion"
-          extension="yes"
-        />
-         <Project
-            image="/projects/portfolio.jpg"
-            repo="https://github.com/tudorale/portfolio-concept"
-            title="Portfolio"
-            description="Portfolio where you can find more about me, all my big open source projects, case studies about projects for real clients, my skills and you can contact me by filling a form."
-            website="https://tudoralexandru.vercel.app"
-            landing="yes"
+        <div className={styles.innerWrapper}>
+          <Project
+            image="/projects/scorpion.jpg"
+            repo="https://github.com/tudorale/scorpion-theme"
+            title="Scorpion Theme"
+            description="Scorpion is a professional and a looking good dark theme for Visual Studio Code, with three main colors for your editor that will make you relaxed."
+            website="https://marketplace.visualstudio.com/items?itemName=TudorAlexandru.scorpion"
+            extension="yes"
+          />
+          <Project
+              image="/projects/portfolio.jpg"
+              repo="https://github.com/tudorale/portfolio-concept"
+              title="Portfolio"
+              description="Portfolio where you can find more about me, all my big open source projects, case studies about projects for real clients, my skills and you can contact me by filling a form."
+              website="https://tudoralexandru.vercel.app"
+              landing="yes"
+              react="yes"
+            />
+          <Project
+            image="/projects/typinghub.jpg"
+            repo="https://github.com/tudorale/typinghub"
+            title="TypingHub"
+            description="TypingHub is a competitive platform for typists, where you can improve your typing speed by taking tests on different categories and gain points to join into the top."
+            website="https://tudorale.github.io/typinghub"
+            application="yes"
             react="yes"
           />
-        <Project
-          image="/projects/typinghub.jpg"
-          repo="https://github.com/tudorale/typinghub"
-          title="TypingHub"
-          description="TypingHub is a competitive platform for typists, where you can improve your typing speed by taking tests on different categories and gain points to join into the top."
-          website="https://tudorale.github.io/typinghub"
-          application="yes"
-          react="yes"
-        />
-        <Project
-          image="/projects/onlylearn.jpg"
-          repo="https://github.com/tudorale/onlylearn"
-          title="OnlyLearn"
-          description="OnlyLearn, a free platform where you can learn Web Development for free with more than 60 lessons in HTML5, CSS3 & Responsive Design, and a text editor where you can practice."
-          website="https://only-learn-3ff6b.web.app/"
-          application="yes"
-          react="yes"
-        />
-        <Project
-          image="/projects/motes.jpg"
-          repo="https://github.com/tudorale/motes"
-          title="Motes"
-          description="Motes is a place where you can keep all your notes in one place, the project started with the idea of a global Notes App as you have on your phone or computer, now you can keep all your notes here and you can access them on every device by going to your mote via a key. Made it mostly for personal use."
-          website="https://tudorale.github.io/motes/#/"
-          application="yes"
-          react="yes"
-        />
+          <Project
+            image="/projects/onlylearn.jpg"
+            repo="https://github.com/tudorale/onlylearn"
+            title="OnlyLearn"
+            description="OnlyLearn, a free platform where you can learn Web Development for free with more than 60 lessons in HTML5, CSS3 & Responsive Design, and a text editor where you can practice."
+            website="https://only-learn-3ff6b.web.app/"
+            application="yes"
+            react="yes"
+          />
+          <Project
+            image="/projects/motes.jpg"
+            repo="https://github.com/tudorale/motes"
+            title="Motes"
+            description="Motes is a place where you can keep all your notes in one place, the project started with the idea of a global Notes App as you have on your phone or computer, now you can keep all your notes here and you can access them on every device by going to your mote via a key. Made it mostly for personal use."
+            website="https://tudorale.github.io/motes/#/"
+            application="yes"
+            react="yes"
+          />
+        </div>
       </div>
     </div>
   )
