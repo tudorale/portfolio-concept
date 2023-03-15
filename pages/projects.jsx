@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Projects.module.scss'
 import Navbar from "../components/Navbar.jsx";
 import Footer from '../components/Footer.jsx';
-import {handleCursorHoverButtons, handleCursorOutButtons} from "../components/actions.js"
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {useEffect} from "react";

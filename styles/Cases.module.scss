@@ -1,4 +1,4 @@
-.projects{
+.studies{
     display: grid;    
     height: 100vh;
     background: rgb(4,0,23);
@@ -22,7 +22,7 @@
         width: 600px;
     }
 
-    .x, .cube{
+    .round, .cube{
 
         display: flex;
         flex-direction: column;
@@ -83,7 +83,6 @@
       transform: translate(262px, 830px);
     }
 }
-
 
 
 @media only screen and (max-width: 950px){
