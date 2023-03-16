@@ -1,0 +1,175 @@
+@import "../styles/variables.scss";
+
+.about{
+    display: grid;    
+    height: 100vh;
+    background: rgb(4,0,23);
+    background: radial-gradient(circle, rgba(4,0,23,1) 0%, rgba(12,0,57,1) 0%, rgba(4,0,23,1) 100%);
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    align-self: center;
+    margin-top: -40px;
+
+    .text{
+        text-align: center;
+        margin: 0 90px;
+        position: relative;
+        z-index: 2;
+        font-size: 2.5rem;
+        width: 600px;
+    }
+
+    .x, .cube{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 5 !important;
+
+        img{
+            width: 55px;
+            position: relative;
+            padding-top: 10px;
+        }
+        p{
+            font-family: "VT323";
+            color: rgba(255, 255, 255, 0.308);
+            position: relative;
+            padding-top: 0px;
+            font-size: 1.3rem;
+        }
+    }
+
+    .middleMiddle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+    }
+}
+
+.aboutWrapper{
+    width: 100%;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    .innerWrapper{
+        width: 80%;
+        margin: 0 auto;
+        .aboutInfo{
+            .aboutTitle{
+                color: $main-color;
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.15rem;
+                margin-top: 15px;
+            }
+
+                        
+            .cvButton{
+                position: relative;
+                padding: 3px 25px;
+                padding-right: 30px;
+                margin-top: 20px;
+                outline: none;
+                border: none;
+                border-radius: 4px;
+                background-color: $main-hover;
+                font-size: 1rem;
+                color: white;
+                cursor: pointer;
+                transition: all 300ms linear;
+                margin-right: 20px;
+
+                svg{
+                    width: 25px;
+                    height: 25px;
+                    position: relative;
+                    left: -7px;
+                    top: 2px;
+                }
+                .view{
+                    fill: white;
+                }
+                span{
+                    position: relative;
+                    left: 10px;
+                    top: -4px;
+                    font-size: 1.1rem;
+                }
+            }
+
+            .cvButton:hover{
+                background-color: $main-color;
+                transform: scale(1.02);
+            }
+        }
+
+        .mySkills{
+            margin-top: 50px;
+            .skillsTitle{
+                color: $main-color;
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.15rem;
+                margin-top: 15px;
+            }
+
+            .skillsIcons{
+                margin-top: 20px;
+                display: flex;
+                a{
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.scroll {
+    display: block;
+    margin-top: 80px;
+}
+
+.circle {
+    animation: upDown 800ms infinite alternate-reverse;
+}
+
+@keyframes upDown {
+    0% {
+      -webkit-transform: translate(262px, 798px);
+      transform: translate(262px, 798px);
+    }
+    100% {
+      -webkit-transform: translate(262px, 830px);
+      transform: translate(262px, 830px);
+    }
+}
+
+
+
+@media only screen and (max-width: 950px){
+    .middle{
+        font-size: 3rem;
+        div:nth-child(2)::after{
+            margin-top: 19px;
+        }
+    }
+}
+
+@media only screen and (max-width: 810px){
+    .middle{
+        div:nth-child(2){
+            margin: 0 50px;
+        }
+    }
+}

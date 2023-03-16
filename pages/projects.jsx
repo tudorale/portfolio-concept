@@ -40,7 +40,7 @@ export default function Home() {
         <div className={styles.middle}>
               <Link href="/">
                 <div className={styles.cube}>
-                  <img src="/square.png" />
+                  <img src="/hex.png" />
                   <p>start</p>
                 </div>
               </Link>

@@ -41,7 +41,7 @@ export default function Studies() {
         <div className={styles.middle}>
               <Link href="/">
                 <div className={styles.cube}>
-                  <img src="/square.png" />
+                  <img src="/hex.png" />
                   <p>start</p>
                 </div>
               </Link>
@@ -87,7 +87,7 @@ export default function Studies() {
                   </svg>   
               </div>
 
-              <Link href="/case-studies">
+              <Link href="/about">
                 <div className={styles.round}>
                   <img src="/circle.png" />
                   <p>about</p>
