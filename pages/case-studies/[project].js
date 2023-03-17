@@ -27,7 +27,7 @@ export default function Study({data}) {
     <div className="extra">
       <div className={styles.study}>
             <Head>
-                <title>Tudor Alexandru - {data.title}</title>
+                <title>{data ? `Tudor Alexandru | ${data.title}` : "Tudor Alexandru | Case Study"}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="author" content="Tudor Alexandru" />
                 <meta name="keywords" content="web development, front-end developer, developer, programmer, tudor alexandru, tudor, ai bloc" />

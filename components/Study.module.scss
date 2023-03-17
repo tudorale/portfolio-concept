@@ -27,7 +27,7 @@
     margin-top: 20px;
 }
 
-.projectButton a button {
+.projectButton button {
     padding: 5px 20px;
     border: none;
     color: white;
@@ -40,12 +40,12 @@
     transition: all 300ms ease-in;
 }
 
-.projectButton a button:hover {
+.projectButton  button:hover {
     transform: scale(1.05);
     background-color: $main-color;
 }
 
-.projectButton a button svg{
+.projectButton  button svg{
     fill: white;
     position: relative;
     left: -5px;
@@ -56,7 +56,7 @@
     margin-left: 20px;
 }
 
-.projectButton a button span{
+.projectButton  button span{
     position: relative;
     left: 10px;
     font-size: 1.1rem;
