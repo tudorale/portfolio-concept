@@ -1,0 +1,233 @@
+@import "../styles/variables.scss";
+
+.hire{
+    display: grid;    
+    height: 100vh;
+    background: rgb(4,0,23);
+    background: radial-gradient(circle, rgba(4,0,23,1) 0%, rgba(12,0,57,1) 0%, rgba(4,0,23,1) 100%);
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    align-self: center;
+    margin-top: -40px;
+
+    .x, .cube{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        z-index: 5 !important;
+
+        img{
+            width: 55px;
+            position: relative;
+            padding-top: 10px;
+        }
+        p{
+            font-family: "VT323";
+            color: rgba(255, 255, 255, 0.308);
+            position: relative;
+            padding-top: 0px;
+            font-size: 1.3rem;
+        }
+    }
+
+    .middleMiddle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 80px;
+    }
+}
+
+
+
+.form{
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 320px 320px;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    grid-row-gap: 13px;
+    grid-template-areas: 
+        "name email"
+        "message message"
+        "under under"
+    ;
+}
+
+.name{
+    grid-area: name;
+}
+
+.email{
+    grid-area: email;
+}
+
+.message{
+    grid-area: message;
+}
+
+.form button{
+    padding: 6px 20px;
+    width: fit-content;
+    padding-right: 30px;
+    border: none;
+    outline: none;
+    background-color: $main-hover;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms linear;
+    position: relative;
+    top: 20px;
+    text-align: start;
+}
+
+.form button:hover{
+    transform: scale(1.03);
+    background: $main-color !important;
+}
+
+
+.form button svg{
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.form button span{
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+
+.name input, .email input{
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid rgb(149, 126, 243);
+    background-color: transparent;
+    outline: none;
+    padding: 15px;
+    color: white;
+    font-size: 1.1rem;
+    width: 100%;
+    z-index: 99;
+    font-weight: 400;
+    transition: all 300ms linear;
+}
+
+.message textarea{
+    border: none;
+    border-radius: 5px;
+    border: 1px solid rgb(149, 126, 243);
+    background-color: transparent;
+    width: 100%;
+    color: white;
+    outline: none;
+    resize: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    height: 150px;
+    transition: all 300ms linear;
+}
+
+.name label, .email label, .message label{
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: all 300ms linear;
+    color: rgb(149, 126, 243);
+    top: 32px;
+    left: 10px;
+    background-color: transparent;
+    z-index: 999;
+    width: fit-content;
+}
+
+.loading {
+    border: 6px solid rgb(236, 236, 236);
+    border-radius: 50%;
+    border-top: 6px solid $main-color;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    z-index: 999;
+    left: 30px;
+    top: 20px;
+    transition: all 300ms ease-in;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+.underForm{
+    grid-area: under;
+    display: flex;
+}
+
+@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+  
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+@media only screen and (max-width: 600px){
+    .form{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "name"
+            "email"
+            "message"
+            "btn"
+        ;
+    }
+}
+
+
+@media only screen and (max-width: 950px){
+    .middle{
+        font-size: 3rem;
+        div:nth-child(2)::after{
+            margin-top: 19px;
+        }
+    }
+}
+
+@media only screen and (max-width: 810px){
+    .middle{
+        div:nth-child(2){
+            margin: 0 50px;
+        }
+    }
+}

@@ -25,7 +25,7 @@ export default function Home() {
     <div className="extra">
       <div className={styles.about }>
         <Head>
-          <title>Tudor Alexandru | Personal Projects</title>
+          <title>Tudor Alexandru | About Me & Skills</title>
           <meta name="description" content="About me and my skills in Front-End Development" />
           <link rel="icon" href="/circle.png" />
         </Head>

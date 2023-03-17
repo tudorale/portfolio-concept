@@ -87,7 +87,7 @@ export default function Home() {
         <title>Tudor Alexandru | An Enthusiastic Front-End Developer</title>
         <meta name="description" content="Portfolio where you can find more about me and my journey as a Front-End Developer!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/square.png" />
+        <link rel="icon" href="/hex.png" />
         <meta name="keywords" content="web development, front-end developer, developer, programmer, tudor alexandru, tudor, website development"></meta>
       </Head>
 
