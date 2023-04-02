@@ -134,17 +134,19 @@
     
 }
 
-@media only screen and (max-width: 850px){
-    .partTwo img {
-        width: 370px;
-    }  
-}
 
 @media only screen and (max-width: 550px){
     .projectDescription {
         padding: 0px;
     }
     
+}
+
+@media only screen and (max-width: 500px){
+    .partTwo img {
+        width: 370px;
+        height: 200px;
+    }  
 }
 
 @media only screen and (max-width: 405px){
@@ -154,7 +156,7 @@
     
 }
 
-@media only screen and (max-width: 333px){
+@media only screen and (max-width: 405px){
     .projectButtons {
         flex-direction: column;
     }    

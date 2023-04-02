@@ -48,33 +48,35 @@
 }
 
 .otherFooter{
-    display: flex;
-    width: fit-content;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
+    width: 100%;
     transition: all 300ms linear;
-    transform: translate(-50%, -50%);
     padding-bottom: 5px;
     opacity: 0;
     z-index: 5;
-    p{
-        font-size: 1.5rem;
-        color: rgb(93, 52, 255);
-        font-family: "VT323";
-        margin: 0 20px;
-        text-decoration: underline;
-    }
+    flex-wrap: wrap;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;    
 
-    .active{
-        color:rgb(93, 52, 255);
-    }
-
-    .notActive{
-        color: rgb(172, 151, 255);
-    }
-
-
+        p{
+            font-size: 1.5rem;
+            color: rgb(93, 52, 255);
+            font-family: "VT323";
+            margin: 0 20px;
+            text-decoration: underline;
+        }
+    
+        .active{
+            color:rgb(93, 52, 255);
+        }
+    
+        .notActive{
+            color: rgb(172, 151, 255);
+        }
 }
 
 @keyframes pulseColor{
@@ -86,7 +88,24 @@
     }
 }
 
+@media only screen and (max-width: 950px){
+    .otherFooter{
+        position: relative;
+        transform: none;
+        left: unset;
+        bottom: unset;
+        padding-bottom: 30px;
+    }
+}
+
 @media only screen and (max-width: 540px){
+    .otherFooter{
+        p{
+            margin: 0 10px;
+            margin-top: 15px;
+        }
+    }
+
     .footer{
         margin-top: 60px;
     }

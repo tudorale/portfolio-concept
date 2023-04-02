@@ -87,18 +87,47 @@
 
 
 @media only screen and (max-width: 950px){
+    .projects{
+        height: auto;
+    }
     .middle{
         font-size: 3rem;
+        margin-top: 0px;
+        margin-bottom: 70px;
         div:nth-child(2)::after{
             margin-top: 19px;
+        }
+        .text{
+            width: fit-content;
+        }
+        .x, .cube{
+            display: none;
+        }
+    }
+
+    .scroll{
+        margin-top: 40px;
+    }
+
+}
+
+
+@media only screen and (max-width: 650px){
+    .middle{
+        .text{
+            font-size: 2rem;
+            padding: 0 30px;
+            width: 100%;
         }
     }
 }
 
-@media only screen and (max-width: 810px){
+@media only screen and (max-width: 370px){
     .middle{
-        div:nth-child(2){
-            margin: 0 50px;
+        .text{
+            font-size: 1.6rem !important;
+            padding: 0 15px;
+            width: 100%;
         }
     }
 }
