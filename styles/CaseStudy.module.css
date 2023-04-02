@@ -1,0 +1,258 @@
+.study {
+  display: grid;
+  height: 100vh;
+  background: rgb(4, 0, 23);
+  background: radial-gradient(circle, rgb(4, 0, 23) 0%, rgb(12, 0, 57) 0%, rgb(4, 0, 23) 100%);
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  align-self: center;
+  margin-top: -40px;
+}
+.middle .text {
+  text-align: center;
+  margin: 0 90px;
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  width: 600px;
+}
+.middle .text .smallerText {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.452);
+}
+.middle .round, .middle .cube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 5 !important;
+}
+.middle .round img, .middle .cube img {
+  width: 55px;
+  position: relative;
+  padding-top: 10px;
+}
+.middle .round p, .middle .cube p {
+  font-family: "VT323";
+  color: rgba(255, 255, 255, 0.308);
+  position: relative;
+  padding-top: 0px;
+  font-size: 1.3rem;
+}
+.middle .middleMiddle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.studyWrapper {
+  width: 100%;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
+.studyWrapper .innerWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.scroll {
+  display: block;
+  margin-top: 80px;
+}
+
+.circle {
+  animation: upDown 800ms infinite alternate-reverse;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translate(262px, 798px);
+  }
+  100% {
+    transform: translate(262px, 830px);
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translate(262px, 798px);
+  }
+  100% {
+    transform: translate(262px, 830px);
+  }
+}
+.studyContent {
+  position: relative;
+  width: 1080px;
+  margin: 0 auto;
+  top: 70px;
+}
+
+.studyContent h1 {
+  color: rgb(120, 86, 255);
+  font-size: 2.1rem;
+  font-style: italic;
+}
+
+.studyContent p {
+  font-size: 1.2rem;
+  margin: 20px 0px;
+}
+
+.studyContent p span {
+  color: rgb(62, 14, 255);
+  font-weight: 500;
+}
+
+.banner {
+  width: 100%;
+  padding: 30px;
+  background: rgb(6, 0, 36);
+  position: relative;
+  top: 100px;
+}
+
+.bannerContent {
+  display: grid;
+  text-align: center;
+  color: white;
+  width: 1080px;
+  margin: 0 auto;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.bannerImage img {
+  border-radius: 10px;
+}
+
+.bannerInfo {
+  width: 450px;
+}
+
+.studyWrapper .buttons {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.studyWrapper .buttons a button {
+  position: relative;
+  padding: 5px 25px;
+  padding-right: 30px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(120, 86, 255);
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.studyWrapper .buttons a .websiteButton {
+  margin-left: 25px;
+}
+
+.studyWrapper .buttons a button:hover {
+  background-color: rgb(62, 14, 255);
+  transform: scale(1.03);
+}
+
+.studyWrapper .buttons a button svg {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  left: -7px;
+  top: 2px;
+  fill: white;
+}
+
+.studyWrapper .buttons a button span {
+  position: relative;
+  left: 10px;
+  top: -6px;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1275px) {
+  .image img {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 1125px) {
+  .image {
+    display: none;
+  }
+  .bannerInfo {
+    display: none;
+  }
+  .bannerContent {
+    width: auto;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .studyContent {
+    width: auto;
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .study {
+    height: auto;
+  }
+  .middle {
+    font-size: 3rem;
+    margin-top: 0px;
+    margin-bottom: 70px;
+  }
+  .middle div:nth-child(2)::after {
+    margin-top: 19px;
+  }
+  .middle .text {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 0 10px;
+  }
+  .middle .round, .middle .cube {
+    display: none;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .bannerImage img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .studyWrapper .buttons a .websiteButton {
+    margin-left: 0px;
+  }
+  .studyWrapper .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner {
+    padding: 20px 10px;
+  }
+  .bannerContent {
+    grid-gap: 20px;
+  }
+}/*# sourceMappingURL=CaseStudy.module.css.map */

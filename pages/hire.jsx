@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import styles from '../styles/Hire.module.scss'
+import styles from '../styles/Hire.module.css'
 import Navbar from "../components/Navbar.jsx";
 import Footer from '../components/Footer.jsx';
 import Link from "next/link";

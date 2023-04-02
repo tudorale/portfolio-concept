@@ -1,4 +1,4 @@
-import styles from "./Components.module.scss"
+import styles from "./Components.module.css"
 import Link from "next/link";
 import {handleCursorHoverButtons, handleCursorOutButtons} from "../components/actions.js"
 

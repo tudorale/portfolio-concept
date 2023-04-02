@@ -26,6 +26,7 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^10.1.0",
     "gltfjsx": "^6.1.4",
+    
     "react-spring": "^9.7.1",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",

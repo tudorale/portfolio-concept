@@ -1,0 +1,183 @@
+.about {
+  display: grid;
+  height: 100vh;
+  background: rgb(4, 0, 23);
+  background: radial-gradient(circle, rgb(4, 0, 23) 0%, rgb(12, 0, 57) 0%, rgb(4, 0, 23) 100%);
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  align-self: center;
+  margin-top: -40px;
+}
+.middle .text {
+  text-align: center;
+  margin: 0 90px;
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  width: 600px;
+}
+.middle .x, .middle .cube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 5 !important;
+}
+.middle .x img, .middle .cube img {
+  width: 55px;
+  position: relative;
+  padding-top: 10px;
+}
+.middle .x p, .middle .cube p {
+  font-family: "VT323";
+  color: rgba(255, 255, 255, 0.308);
+  position: relative;
+  padding-top: 0px;
+  font-size: 1.3rem;
+}
+.middle .middleMiddle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.aboutWrapper {
+  width: 100%;
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.aboutWrapper .innerWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.aboutWrapper .innerWrapper .aboutInfo .aboutTitle {
+  color: rgb(62, 14, 255);
+  font-size: 2rem;
+}
+.aboutWrapper .innerWrapper .aboutInfo p {
+  font-size: 1.15rem;
+  margin-top: 15px;
+}
+.aboutWrapper .innerWrapper .aboutInfo .cvButton {
+  position: relative;
+  padding: 3px 25px;
+  padding-right: 30px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(120, 86, 255);
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms linear;
+  margin-right: 20px;
+}
+.aboutWrapper .innerWrapper .aboutInfo .cvButton svg {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: -7px;
+  top: 2px;
+}
+.aboutWrapper .innerWrapper .aboutInfo .cvButton .view {
+  fill: white;
+}
+.aboutWrapper .innerWrapper .aboutInfo .cvButton span {
+  position: relative;
+  left: 10px;
+  top: -4px;
+  font-size: 1.1rem;
+}
+.aboutWrapper .innerWrapper .aboutInfo .cvButton:hover {
+  background-color: rgb(62, 14, 255);
+  transform: scale(1.02);
+}
+.aboutWrapper .innerWrapper .mySkills {
+  margin-top: 50px;
+}
+.aboutWrapper .innerWrapper .mySkills .skillsTitle {
+  color: rgb(62, 14, 255);
+  font-size: 2rem;
+}
+.aboutWrapper .innerWrapper .mySkills p {
+  font-size: 1.15rem;
+  margin-top: 15px;
+}
+.aboutWrapper .innerWrapper .mySkills .skillsIcons {
+  margin-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.aboutWrapper .innerWrapper .mySkills .skillsIcons a {
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+.scroll {
+  display: block;
+  margin-top: 80px;
+}
+
+.circle {
+  animation: upDown 800ms infinite alternate-reverse;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translate(262px, 798px);
+  }
+  100% {
+    transform: translate(262px, 830px);
+  }
+}
+@media only screen and (max-width: 950px) {
+  .about {
+    height: auto;
+  }
+  .middle {
+    font-size: 3rem;
+    margin-top: 0px;
+    margin-bottom: 70px;
+  }
+  .middle div:nth-child(2)::after {
+    margin-top: 19px;
+  }
+  .middle .text {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0px;
+  }
+  .middle .x, .middle .cube {
+    display: none;
+  }
+  .scroll {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .middle .text {
+    font-size: 2rem;
+    padding: 0px;
+    width: 100%;
+  }
+  .aboutWrapper .innerWrapper {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .middle .text {
+    font-size: 1.6rem !important;
+    padding: 0px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=About.module.css.map */

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Projects.module.scss'
+import styles from '../styles/Projects.module.css'
 import Navbar from "../components/Navbar.jsx";
 import Footer from '../components/Footer.jsx';
 import Link from "next/link";
