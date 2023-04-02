@@ -28,6 +28,7 @@
     "gltfjsx": "^6.1.4",
     "react-spring": "^9.7.1",
     "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
     "three": "^0.150.1"
   }
 }
