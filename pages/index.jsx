@@ -74,8 +74,7 @@ export default function Home() {
   useEffect(() => {
     let body = document.querySelector("body");
     body.style.overflowY = "hidden";
-    body.style.background = "rgb(4,0,23)"
-    body.style.background = "radial-gradient(circle, rgba(4,0,23,1) 0%, rgba(12,0,57,1) 0%, rgba(4,0,23,1) 100%)"
+    body.style.background = "rgb(7, 0, 41)"
     
     let allElements = document.getElementsByTagName("*");
     for (let i = 0, len = allElements.length; i < len; i++) {

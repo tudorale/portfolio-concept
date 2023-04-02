@@ -1,8 +1,7 @@
 .hire {
   display: grid;
   height: 100vh;
-  background: rgb(4, 0, 23);
-  background: radial-gradient(circle, rgb(4, 0, 23) 0%, rgb(12, 0, 57) 0%, rgb(4, 0, 23) 100%);
+  background: rgb(7, 0, 41);
 }
 
 .middle {
@@ -70,7 +69,7 @@
   padding-right: 30px;
   border: none;
   outline: none;
-  background-color: rgb(120, 86, 255);
+  background-color: rgb(108, 118, 255);
   color: white;
   font-size: 1.1rem;
   display: flex;

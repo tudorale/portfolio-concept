@@ -14,12 +14,14 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    document.querySelector("body").style.overflowY = "auto";
+    let body = document.querySelector("body");
+    body.style.overflowY = "hidden";
+    body.style.background = "rgb(7, 0, 41)"
+    
     let allElements = document.getElementsByTagName("*");
-
     for (let i = 0, len = allElements.length; i < len; i++) {
         let element = allElements[i];
-        element.classList.remove("withoutCursor")
+        element.classList.add("withoutCursor")
     }
   }, [router])
 
