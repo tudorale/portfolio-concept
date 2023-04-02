@@ -104,7 +104,7 @@ export default function Home() {
                 <p>I am a self-thought Front-End Developer and a creative person, and I
 love to learn and develop new skills that will help me in my journey.</p>
                 <p>I started learning Front-End Development on my own in the summer
-of 2019 and since then I didn't hesitate to learn and discover more. I
+of 2019 and since then I didn&apos;t hesitate to learn and discover more. I
 started with creating personal projects, some to help others, some
 for personal use, and then in 2021 I started freelancing and making
 a name in this space.</p>
