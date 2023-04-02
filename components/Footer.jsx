@@ -21,7 +21,7 @@ function Footer({path}) {
     }, [])
 
   return (
-    <div className={router.pathname === "/" || router.pathname === "/hire" || router.pathname === "/about" ? styles.footer : styles.otherFooter} id="footer"> 
+    <div className={router.pathname === "/" || router.pathname === "/hire" ? styles.footer : styles.otherFooter} id="footer"> 
         <Link href="/projects">
             <p className={path === "/projects" ? styles.active : styles.notActive} onMouseEnter={handleCursorHoverLink} onMouseLeave={handleCursorOutLink}>personal projects</p>
         </Link>

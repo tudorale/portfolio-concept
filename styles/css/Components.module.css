@@ -107,6 +107,9 @@
   .otherFooter p {
     cursor: pointer !important;
   }
+  .otherFooter .active {
+    color: white !important;
+  }
 }
 @media only screen and (max-width: 540px) {
   .otherFooter p {
