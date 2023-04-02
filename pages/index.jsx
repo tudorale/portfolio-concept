@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/css/Home.module.css'
 import Navbar from "../components/Navbar.jsx";
 import Footer from '../components/Footer.jsx';
 import {handleCursorHoverButtons, handleCursorOutButtons} from "../components/actions.js"

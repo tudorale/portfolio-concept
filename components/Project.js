@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Project.module.css";
+import styles from "../styles/css/Project.module.css";
 
 function Project({title, description, maintained, application, extension, landing, react, website,repo, image}) {
 

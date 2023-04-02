@@ -1,4 +1,4 @@
-import * as styles from "./Components.module.css"
+import * as styles from "../styles/css/Components.module.css"
 import Link from "next/link"
 import {handleCursorHoverLink, handleCursorOutLink} from "./actions.js";
 import { useEffect, useState} from "react";

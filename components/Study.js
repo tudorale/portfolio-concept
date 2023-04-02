@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Study.module.css";
+import styles from "./../styles/css/Study.module.css";
 
 function Project({title, description, link, image, repo}) {
 

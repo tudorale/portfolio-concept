@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../../styles/Cases.module.css'
+import styles from '../../styles/css/Cases.module.css'
 import Navbar from "../../components/Navbar.jsx";
 import Footer from '../../components/Footer.jsx';
 import Link from "next/link";
