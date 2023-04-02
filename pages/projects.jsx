@@ -22,7 +22,6 @@ export default function Home() {
     }
   }, [router])
 
-  // use effect - scrolled like 50px footer shows
 
   return (
     <div className="extra">

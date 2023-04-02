@@ -11,9 +11,13 @@ function Footer({path}) {
     useEffect(() => {
         let footer = document.querySelector("#footer");
 
-        document.addEventListener("scroll", () => {
-           footer.style.opacity = "1";
-        })
+        if(window.innerWidth > 950){
+            document.addEventListener("scroll", () => {
+                footer.style.opacity = "1";
+            })
+        }else{
+            footer.style.opacity = "1";
+        }
     }, [])
 
   return (
