@@ -116,6 +116,7 @@
 .studyContent h1{
     color: $main-hover;
     font-size: 2.1rem;
+    font-style: italic;
 }
 
 .studyContent p{
@@ -240,6 +241,28 @@
     
 }
 
+@media only screen and (max-width: 950px){
+    .study{
+        height: auto;
+    }
+    .middle{
+        font-size: 3rem;
+        margin-top: 0px;
+        margin-bottom: 70px;
+        div:nth-child(2)::after{
+            margin-top: 19px;
+        }
+        .text{
+            width: fit-content;
+            margin: 0;
+            padding: 0 10px;
+        }
+       .round, .cube{
+        display: none;
+       }
+    }
+}
+
 @media only screen and (max-width: 580px){
     .bannerImage img{
         width: 100% !important;
@@ -247,10 +270,15 @@
     }
 }
 
-
-
 @media only screen and (max-width: 400px){
-
+    .studyWrapper .buttons a .websiteButton {
+        margin-left: 0px;
+    }
+    .studyWrapper .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .banner{
         padding: 20px 10px;
     }
@@ -259,23 +287,4 @@
         grid-gap: 20px;
     }
     
-}
-
-
-
-@media only screen and (max-width: 950px){
-    .middle{
-        font-size: 3rem;
-        div:nth-child(2)::after{
-            margin-top: 19px;
-        }
-    }
-}
-
-@media only screen and (max-width: 810px){
-    .middle{
-        div:nth-child(2){
-            margin: 0 50px;
-        }
-    }
 }
