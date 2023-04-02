@@ -37,7 +37,7 @@
   color: rgba(255, 255, 255, 0.904);
 }
 .footer .notActive {
-  color: rgba(187, 170, 255, 0.349);
+  color: rgba(184, 195, 255, 0.301);
 }
 .footer .cta {
   animation: pulseColor 0.65s forwards alternate-reverse infinite;
@@ -66,27 +66,46 @@
   text-decoration: underline;
 }
 .otherFooter .active {
-  color: rgb(93, 52, 255);
+  color: rgb(62, 14, 255);
 }
 .otherFooter .notActive {
-  color: rgb(172, 151, 255);
+  color: rgba(184, 195, 255, 0.301);
 }
 
 @keyframes pulseColor {
   from {
-    color: rgba(187, 170, 255, 0.349);
+    color: rgba(184, 195, 255, 0.301);
   }
   to {
     color: rgba(255, 255, 255, 0.904);
   }
 }
+@media only screen and (min-height: 490px) and (max-width: 950px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .footer p {
+    cursor: pointer !important;
+  }
+}
 @media only screen and (max-width: 950px) {
+  .footer p {
+    cursor: pointer !important;
+  }
   .otherFooter {
     position: relative;
     transform: none;
     left: unset;
     bottom: unset;
     padding-bottom: 30px;
+  }
+  .otherFooter p {
+    cursor: pointer !important;
   }
 }
 @media only screen and (max-width: 540px) {

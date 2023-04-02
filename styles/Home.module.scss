@@ -1,3 +1,4 @@
+@import "./variables.scss";
 
 .home{
     display: grid;    
@@ -43,7 +44,7 @@
         text-align: center;
         p{
             font-family: "VT323";
-            color: rgba(255, 255, 255, 0.308);
+            color: $grey;
             position: relative;
             padding-top: 0px;
             font-size: 1.3rem;
@@ -59,21 +60,22 @@
     z-index: -2 !important;
 }
 
-@media only screen and (max-width: 980px){
-    .home{
-        height: auto;
-        overflow: auto;
-    }
-    .middle{
-        margin-top: 130px;
-        margin-bottom: 60px;
-    }
-}
+
 
 @media only screen and (max-width: 950px){
-    .middle{
+    .home{
+        height: auto;
+        overflow: unset;
+    }
+
+    .middle{ 
+        margin-top: 130px;
+        margin-bottom: 60px;
         .text{
             font-size: 3rem;
+        }
+        .x p ,.tringle p {
+            cursor: pointer !important;
         }
         .text::after{
             margin-top: 20px;

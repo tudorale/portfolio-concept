@@ -1,4 +1,6 @@
 
+@import "../styles/variables.scss";
+
 .navbar{
     color: white;
     position: relative;
@@ -39,7 +41,7 @@
     }
 
     .notActive{
-        color: rgba(187, 170, 255, 0.349);
+        color: $grey;
     }
 
     .cta{
@@ -71,30 +73,51 @@
         }
     
         .active{
-            color:rgb(93, 52, 255);
+            color: $main-color;
         }
     
         .notActive{
-            color: rgb(172, 151, 255);
+            color: $grey;
         }
 }
 
 @keyframes pulseColor{
     from{
-        color: rgba(187, 170, 255, 0.349);
+        color: $grey;
     }
     to{
         color: rgba(255, 255, 255, 0.904);
     }
 }
 
+@media only screen and (min-height: 490px) and (max-width: 950px){
+    .footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        p{
+            cursor: pointer !important;
+        }
+    }
+}
 @media only screen and (max-width: 950px){
+    .footer{
+        p{
+            cursor: pointer !important;
+        }
+    }
     .otherFooter{
         position: relative;
         transform: none;
         left: unset;
         bottom: unset;
         padding-bottom: 30px;
+        p{
+            cursor: pointer !important;
+        }
     }
 }
 

@@ -28,7 +28,7 @@
 }
 .middle .x p, .middle .cube p {
   font-family: "VT323";
-  color: rgba(255, 255, 255, 0.308);
+  color: rgba(184, 195, 255, 0.301);
   position: relative;
   padding-top: 0px;
   font-size: 1.3rem;
@@ -103,7 +103,7 @@
   height: 45px;
   border: none;
   border-radius: 5px;
-  border: 1px solid rgb(149, 126, 243);
+  border: 1px solid rgb(108, 118, 255);
   background-color: transparent;
   outline: none;
   padding: 15px;
@@ -118,7 +118,7 @@
 .message textarea {
   border: none;
   border-radius: 5px;
-  border: 1px solid rgb(149, 126, 243);
+  border: 1px solid rgb(108, 118, 255);
   background-color: transparent;
   width: 100%;
   color: white;
@@ -136,7 +136,7 @@
   font-size: 1.1rem;
   font-weight: 400;
   transition: all 300ms linear;
-  color: rgb(149, 126, 243);
+  color: rgb(108, 118, 255);
   top: 32px;
   left: 10px;
   background-color: transparent;
