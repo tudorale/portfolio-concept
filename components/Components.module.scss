@@ -18,8 +18,10 @@
     display: flex;
     width: fit-content;
     position: relative;
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 40px;
+    justify-content: center;
     padding-bottom: 20px;
     z-index: 5;
     p{
@@ -27,6 +29,8 @@
         color: rgba(187, 170, 255, 0.349);
         font-family: "VT323";
         margin: 0 20px;
+        margin-top: 15px;
+        text-align: center;
         text-decoration: underline;
     }
 
@@ -79,5 +83,15 @@
     }
     to{
         color: rgba(255, 255, 255, 0.904);
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .footer{
+        margin-top: 60px;
+    }
+    .footer p{
+        margin: 0 10px;
+        margin-top: 15px;
     }
 }

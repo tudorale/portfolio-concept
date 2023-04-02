@@ -54,24 +54,29 @@ export default function Home() {
   }, [moving.moving])
 
   useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-    const innerCursor = document.querySelector(".innerCursor");
+    if(window.innerWidth >= 980){
+      const cursor = document.querySelector(".cursor");
+      const innerCursor = document.querySelector(".innerCursor");
 
-    document.querySelector(".home").addEventListener("mousemove", (e) =>{
-      cursor.setAttribute("style", "top: "+(e.pageY-22)+"px; left: "+(e.pageX-23)+"px; display: block;")
-    })
+      document.querySelector(".home").addEventListener("mousemove", (e) =>{
+        cursor.setAttribute("style", "top: "+(e.pageY-22)+"px; left: "+(e.pageX-23)+"px; display: block;")
+      })
 
-    document.querySelector(".home").addEventListener("mousemove", (e) =>{
-      innerCursor.setAttribute("style", "top: "+(e.pageY-1)+"px; left: "+(e.pageX-1)+"px; display: block;")
-    })
+      document.querySelector(".home").addEventListener("mousemove", (e) =>{
+        innerCursor.setAttribute("style", "top: "+(e.pageY-1)+"px; left: "+(e.pageX-1)+"px; display: block;")
+      })
+    }
 
     }, [])
 
   const router = useRouter();
 
   useEffect(() => {
-    document.querySelector("body").style.overflowY = "hidden";
-
+    let body = document.querySelector("body");
+    body.style.overflowY = "hidden";
+    body.style.background = "rgb(4,0,23)"
+    body.style.background = "radial-gradient(circle, rgba(4,0,23,1) 0%, rgba(12,0,57,1) 0%, rgba(4,0,23,1) 100%)"
+    
     let allElements = document.getElementsByTagName("*");
     for (let i = 0, len = allElements.length; i < len; i++) {
         let element = allElements[i];

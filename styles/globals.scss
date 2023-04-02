@@ -12,6 +12,16 @@ body{
   cursor: none;
 }
 
+@media only screen and (max-width: 980px){
+  .withoutCursor{
+    cursor: auto !important;
+  }
+  body{
+    overflow: auto;
+    overflow-y: auto !important;
+  }
+}
+
 .haveCursor{
   cursor: auto;
 }
@@ -69,6 +79,17 @@ a {
   transition-timing-function: ease-out;
   display: none;
 }
+
+@media only screen and (max-width: 980px){
+  .withoutCursor{
+    cursor: auto !important;
+  }
+
+  .innerCursor, .cursor{
+    display: none !important;
+  }
+}
+
 
 .hoverDot{
   transform: scale(1.5);
