@@ -10,7 +10,18 @@ export default function App({Component, pageProps}) {
 
   return (
   <>
-    <Component {...pageProps} />
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={router.pathname}
+        initial={{ opacity: 0, }}
+        animate={{ opacity: 1, }}
+        exit={{ opacity: 0, }}
+        transition={{ duration: 0.35 }}
+        className="base"
+      >
+        <Component {...pageProps} />
+      </motion.div>
+    </AnimatePresence>
   </>
     
   )
