@@ -14,16 +14,15 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    let body = document.querySelector("body");
-    body.style.overflowY = "hidden";
-    body.style.background = "rgb(7, 0, 41)"
-    
+    document.querySelector("body").style.overflowY = "auto";
     let allElements = document.getElementsByTagName("*");
+
     for (let i = 0, len = allElements.length; i < len; i++) {
         let element = allElements[i];
-        element.classList.add("withoutCursor")
+        element.classList.remove("withoutCursor")
     }
   }, [router])
+
 
   const [buttonText, setButtonText] = useState("Send email")
 
